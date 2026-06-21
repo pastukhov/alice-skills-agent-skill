@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "eval_name": "coffee-skill-design",
+  "prompt": "Помоги спроектировать публичный навык Алисы для кофейни: пользователь должен узнать меню, адреса, часы работы и оставить заявку на обратный звонок. Нужны активационные фразы, сценарий диалога, требования к модерации и тестовый чеклист.",
+  "assertions": [
+    "Includes activation name suggestions and example user phrases.",
+    "Includes a multi-turn conversation flow with fallback and exit behavior.",
+    "Mentions privacy or account-linking considerations for callback requests.",
+    "Includes moderation checks for name, description, brand/content, and publication metadata.",
+    "Includes a concrete test checklist."
+  ]
+}

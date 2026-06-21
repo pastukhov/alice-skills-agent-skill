@@ -1,0 +1,29 @@
+{
+  "expectations": [
+    {
+      "text": "Routes on request.type and handles SimpleUtterance separately from ButtonPressed.",
+      "passed": false,
+      "evidence": "Required pattern group was not found in output."
+    },
+    {
+      "text": "Uses ButtonPressed payload rather than button title for the help action.",
+      "passed": true,
+      "evidence": "```python # app.py from flask import Flask, request, jsonify app = Flask(__name__) HELP_PAYLOAD = {\"action\": \"help\"} @app.post(\"/webhook\") def webhook(): body = request.get_json(force=True) req = body.get(\"request\", {}) session = body.get(\"session\", {}) request_type = req.get(\"type\") comman"
+    },
+    {
+      "text": "Returns response.text, response.end_session, and version 1.0.",
+      "passed": true,
+      "evidence": "\"message_id\": session.get(\"message_id\"), \"user_id\": session.get(\"user_id\"), }, \"response\": { \"text\": text, \"end_session\": end_session, \"buttons\": [] if end_session else [ { \"title\": \"Помощь\", \"payload\": HELP_PAYLOAD,"
+    },
+    {
+      "text": "Ends the session when the user says the specified exit word.",
+      "passed": true,
+      "evidence": "LOAD or payload.get(\"action\") == \"help\": text = \"Это помощь. Я повторяю вашу команду. Чтобы завершить, скажите: хватит.\" elif request_type == \"SimpleUtterance\": if command.lower() == \"хватит\": text = \"Хорошо, завершаю сессию.\" end_session = True elif command: text = f\"Вы сказали: {"
+    },
+    {
+      "text": "Uses realistic Alice request/response JSON field names.",
+      "passed": true,
+      "evidence": "} @app.post(\"/webhook\") def webhook(): body = request.get_json(force=True) req = body.get(\"request\", {}) session = body.get(\"session\", {}) request_type = req.get(\"type\") command = (req.get(\"command\") or \"\").strip() payload = req.get(\"payload\") or {} text = \"Я умею повторять вашу команду. Скажите что-нибудь или на"
+    }
+  ]
+}

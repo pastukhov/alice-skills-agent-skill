@@ -1,0 +1,36 @@
+{
+  "skill_name": "creating-alice-skills",
+  "iteration": 1,
+  "summary": [
+    {
+      "configuration": "with_skill",
+      "passed": 15,
+      "total": 15,
+      "pass_rate": 1.0
+    },
+    {
+      "configuration": "without_skill",
+      "passed": 14,
+      "total": 15,
+      "pass_rate": 0.9333333333333333
+    }
+  ],
+  "evals": [
+    {
+      "eval_name": "coffee-skill-design",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 5, "total": 5}
+    },
+    {
+      "eval_name": "minimal-webhook",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 4, "total": 5}
+    },
+    {
+      "eval_name": "moderation-review",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 5, "total": 5}
+    }
+  ],
+  "notes": "Timing and token stats were not available in subagent completion notifications. Current eval set is a smoke test; stronger discriminating evals should target exact protocol and moderation details from bundled references."
+}

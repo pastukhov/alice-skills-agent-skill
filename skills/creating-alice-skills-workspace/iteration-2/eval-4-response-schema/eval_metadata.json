@@ -1,0 +1,12 @@
+{
+  "eval_id": 4,
+  "eval_name": "response-schema-repair",
+  "prompt": "Ниже ответ webhook навыка Алисы. Проверь его на соответствие протоколу и перепиши корректно: {\"version\":\"1.0\",\"session\":{\"session_id\":\"s1\"},\"response\":{\"text\":\"Вот адреса\",\"card\":{\"type\":\"ItemsList\",\"items\":[{\"title\":\"Точка 1\"}]},\"buttons\":[{\"title\":\"Сайт\",\"url\":\"https://example.com\"}]}}. Укажи, что именно было неверно.",
+  "assertions": [
+    "Flags missing response.end_session as a protocol problem.",
+    "Flags unnecessary top-level session in the response.",
+    "Mentions that visual cards need useful response.text fallback for voice-only devices.",
+    "Flags ItemsList image requirements or changes the card to a valid/safe response.",
+    "Provides corrected JSON with version 1.0, response.text, and response.end_session."
+  ]
+}

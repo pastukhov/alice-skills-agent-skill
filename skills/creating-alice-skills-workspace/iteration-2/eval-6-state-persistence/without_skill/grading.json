@@ -1,0 +1,29 @@
+{
+  "expectations": [
+    {
+      "text": "Maps current session score to session_state.",
+      "passed": true,
+      "evidence": "их уровней разный срок жизни, область видимости и правила очистки. ## 1. Счет текущей сессии Используйте поле ответа `session_state`. Это состояние вернется в следующем запросе в `state.session` и живет только в рамках текущего диалога. Оно подходит для временных данных раунда: ```json { \"session_state\": { \"quiz_id\": \"capitals\", \"question_index\": 4, \"current_score\": 3,"
+    },
+    {
+      "text": "Maps authorized user's cross-session progress to user_state_update.",
+      "passed": true,
+      "evidence": "состояния на следующий ход. ## 2. Общий прогресс авторизованного пользователя между сессиями Используйте поле ответа `user_state_update`. Это состояние возвращается в следующих запросах в `state.user` и подходит для прогресса, который должен сохраняться между сессиями для одного и того же пользователя: ```json { \"user_state_update\": { \"total_games\": 18, \"total_correct\": 126, \""
+    },
+    {
+      "text": "Maps device/application settings to exact response field application_state, not application_state_update.",
+      "passed": false,
+      "evidence": "Required pattern group was not found in output."
+    },
+    {
+      "text": "Mentions 1 KB JSON object limit for stored state.",
+      "passed": false,
+      "evidence": "Required pattern group was not found in output."
+    },
+    {
+      "text": "Mentions clearing fields with null and preserving unchanged session_state by returning it.",
+      "passed": true,
+      "evidence": "текущего диалога. Как очищать: - Чтобы удалить отдельный ключ в долговременном состоянии, передайте его со значением `null` в `user_state_update`. - Чтобы сбросить прогресс пользователя, передайте `null` для всех ключей, которые вы сохраняли, например: ```json { \"user_state_update\": { \"total_games\": null, \"total_correct\": null, \"best_score\": null, \"completed_qu"
+    }
+  ]
+}

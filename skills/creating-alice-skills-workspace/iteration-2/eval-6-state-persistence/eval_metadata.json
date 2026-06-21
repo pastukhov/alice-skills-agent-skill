@@ -1,0 +1,12 @@
+{
+  "eval_id": 6,
+  "eval_name": "state-persistence",
+  "prompt": "Спроектируй хранение состояния для викторины в навыке Алисы: счет текущей сессии, общий прогресс авторизованного пользователя между сессиями и настройки конкретного устройства. Укажи какие поля ответа использовать, лимиты, как очищать значения и какую ошибку легко допустить.",
+  "assertions": [
+    "Maps current session score to session_state.",
+    "Maps authorized user's cross-session progress to user_state_update.",
+    "Maps device/application settings to exact response field application_state, not application_state_update.",
+    "Mentions 1 KB JSON object limit for stored state.",
+    "Mentions clearing fields with null and preserving unchanged session_state by returning it."
+  ]
+}

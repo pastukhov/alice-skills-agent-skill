@@ -1,0 +1,29 @@
+{
+  "expectations": [
+    {
+      "text": "Flags missing response.end_session as a protocol problem.",
+      "passed": true,
+      "evidence": "ons\": [ { \"title\": \"Сайт\", \"url\": \"https://example.com\", \"hide\": true } ], \"end_session\": false } } ``` Что было неверно: - В `response` отсутствовало обязательное поле `end_session`. Оно должно быть булевым значением. - В `session` не хватало обязательных данных сессии: `message_id` и `user_id`. В реальном ответе их нужно возвращать из вход"
+    },
+    {
+      "text": "Flags unnecessary top-level session in the response.",
+      "passed": false,
+      "evidence": "Required pattern group was not found in output."
+    },
+    {
+      "text": "Mentions that visual cards need useful response.text fallback for voice-only devices.",
+      "passed": true,
+      "evidence": ": \"1.0\", \"session\": { \"session_id\": \"s1\", \"message_id\": 0, \"user_id\": \"user-id\" }, \"response\": { \"text\": \"Вот адреса\", \"card\": { \"type\": \"ItemsList\", \"items\": [ { \"image_id\": \"213044/abcdef1234567890\", \"title\": \"Точка 1\" } ] }, \"buttons\": [ { \"title\": \"Сайт\", \"url\": \"https:"
+    },
+    {
+      "text": "Flags ItemsList image requirements or changes the card to a valid/safe response.",
+      "passed": true,
+      "evidence": "\"message_id\": 0, \"user_id\": \"user-id\" }, \"response\": { \"text\": \"Вот адреса\", \"card\": { \"type\": \"ItemsList\", \"items\": [ { \"image_id\": \"213044/abcdef1234567890\", \"title\": \"Точка 1\" } ] }, \"buttons\": [ { \"title\": \"Сайт\", \"url\": \"https://example.com\", \"hide\": true } ],"
+    },
+    {
+      "text": "Provides corrected JSON with version 1.0, response.text, and response.end_session.",
+      "passed": true,
+      "evidence": "Исходный ответ не полностью соответствует протоколу webhook ответа Алисы. Корректный вариант: ```json { \"version\": \"1.0\", \"session\": { \"session_id\": \"s1\", \"message_id\": 0, \"user_id\": \"user-id\" }, \"response\": { \"text\": \"Вот адреса\", \"card\": { \"type\": \"ItemsList\", \"items\": [ { \"image_id\": \"213044/abcdef1"
+    }
+  ]
+}

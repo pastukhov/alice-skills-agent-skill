@@ -1,0 +1,12 @@
+{
+  "eval_id": 7,
+  "eval_name": "cards-buttons-surfaces",
+  "prompt": "Составь правила ответа для навыка Алисы, который показывает карточку с изображением товара и кнопки. Нужно учесть устройства без screen, BigImage/ImageGallery/ItemsList, payload кнопок, ссылки, и что нельзя делать при обработке ButtonPressed.",
+  "assertions": [
+    "Requires checking screen capability or providing voice-friendly response.text fallback.",
+    "Mentions BigImage, ImageGallery, and ItemsList card types or their selection.",
+    "Mentions item count/image requirements or limits for gallery/list cards.",
+    "Requires using payload for ButtonPressed handling.",
+    "Warns not to route ButtonPressed by visible button title."
+  ]
+}

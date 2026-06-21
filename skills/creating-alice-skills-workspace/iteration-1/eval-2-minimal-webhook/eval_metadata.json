@@ -1,0 +1,12 @@
+{
+  "eval_id": 2,
+  "eval_name": "minimal-webhook",
+  "prompt": "Напиши минимальный webhook для навыка Алисы на любом удобном языке: он должен принимать SimpleUtterance, повторять команду пользователя, обрабатывать кнопку 'Помощь' через payload и корректно завершать сессию по слову 'хватит'.",
+  "assertions": [
+    "Routes on request.type and handles SimpleUtterance separately from ButtonPressed.",
+    "Uses ButtonPressed payload rather than button title for the help action.",
+    "Returns response.text, response.end_session, and version 1.0.",
+    "Ends the session when the user says the specified exit word.",
+    "Uses realistic Alice request/response JSON field names."
+  ]
+}

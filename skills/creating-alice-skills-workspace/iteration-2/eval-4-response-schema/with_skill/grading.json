@@ -1,0 +1,29 @@
+{
+  "expectations": [
+    {
+      "text": "Flags missing response.end_session as a protocol problem.",
+      "passed": true,
+      "evidence": "лностью соответствует формату ответа webhook Алисы. ## Что было неверно - В `response` отсутствует обязательное поле `end_session`. Оно должно быть boolean: `false`, если диалог продолжается, или `true`, если навык завершает сессию. - На верхнем уровне ответа передано поле `session`. В ответе навыка его быть не должно: `session` приходит в запросе от Диалогов, а ответ содержит `response"
+    },
+    {
+      "text": "Flags unnecessary top-level session in the response.",
+      "passed": true,
+      "evidence": "тью соответствует формату ответа webhook Алисы. ## Что было неверно - В `response` отсутствует обязательное поле `end_session`. Оно должно быть boolean: `false`, если диалог продолжается, или `true`, если навык завершает сессию. - На верхнем уровне ответа передано поле `session`. В ответе навыка его быть не должно: `session` приходит в запросе от Диалогов, а ответ содержит `response"
+    },
+    {
+      "text": "Mentions that visual cards need useful response.text fallback for voice-only devices.",
+      "passed": true,
+      "evidence": "image_id` загруженного изображения. Если изображения нет, карточку лучше убрать. - При использовании карточки `response.text` все равно должен оставаться полезным fallback-текстом для устройств без экрана или случаев, когда карточка не отобразилась. Текст `\"Вот адреса\"` формально есть, но для голосового сценария лучше дать сам адрес или понятное действие. ## Корректный вариант без"
+    },
+    {
+      "text": "Flags ItemsList image requirements or changes the card to a valid/safe response.",
+      "passed": true,
+      "evidence": "одит в запросе от Диалогов, а ответ содержит `response`, опциональные поля состояния/аналитики и `version`. - Карточка `ItemsList` описана небезопасно: это список изображений, а элементы должны описывать изображения. В исходном элементе есть только `title`, но нет `image_id` загруженного изображения. Если изображения нет, карточку лучше убрать. - При использовании карточки `response.tex"
+    },
+    {
+      "text": "Provides corrected JSON with version 1.0, response.text, and response.end_session.",
+      "passed": true,
+      "evidence": "ально есть, но для голосового сценария лучше дать сам адрес или понятное действие. ## Корректный вариант без карточки ```json { \"version\": \"1.0\", \"response\": { \"text\": \"Вот адрес: https://example.com\", \"buttons\": [ { \"title\": \"Сайт\", \"url\": \"https://example.com\" } ], \"end_session\": false } } ``` Если нужна именно карточка `ItemsList"
+    }
+  ]
+}

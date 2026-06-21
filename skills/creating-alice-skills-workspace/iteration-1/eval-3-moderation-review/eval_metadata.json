@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "eval_name": "moderation-review",
+  "prompt": "Проверь идею навыка Алисы перед публикацией: название 'Лучший официальный помощник Яндекса', описание обещает медицинские диагнозы по симптомам, а ответы содержат ссылки на сайт клиники. Что не пройдет модерацию и как исправить?",
+  "assertions": [
+    "Flags use of Yandex/Alice-related branding or official status claims as a moderation risk.",
+    "Flags superlative or clickbait wording such as 'best' or 'official' without proof.",
+    "Flags medical diagnosis promises as a safety/legal moderation risk.",
+    "Discusses links/traffic/advertising concerns rather than ignoring them.",
+    "Proposes safer concrete alternatives for name, description, and functionality."
+  ]
+}

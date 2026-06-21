@@ -1,0 +1,417 @@
+[
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/",
+    "title": "О навыках Алисы",
+    "chars": 24658
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/about",
+    "title": "Обзор",
+    "chars": 245477
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/access",
+    "title": "Управление доступом",
+    "chars": 20289
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/activation",
+    "title": "Запуск и выход",
+    "chars": 4315
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/appmetrica",
+    "title": "AppMetrica",
+    "chars": 2569
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/brief",
+    "title": "Бриф на разработку навыка",
+    "chars": 3372
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/buttons",
+    "title": "Кнопки",
+    "chars": 5067
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/certification",
+    "title": "Сертификация агентств и веб-студий",
+    "chars": 15025
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/check",
+    "title": "Развитие сценария",
+    "chars": 3236
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/checklist",
+    "title": "Проверка идеи",
+    "chars": 10551
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-aws",
+    "title": "Размещение навыка в AWS",
+    "chars": 4978
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-azure",
+    "title": "Размещение навыка в Azure",
+    "chars": 6315
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-google-cloud",
+    "title": "Размещение навыка в Google Cloud",
+    "chars": 8236
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-overview",
+    "title": "Подготовка сервера с навыком",
+    "chars": 8351
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-server",
+    "title": "Размещение навыка на своем сервере",
+    "chars": 4520
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-vercel",
+    "title": "Размещение навыка в Vercel",
+    "chars": 4713
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/deploy-ycloud-function",
+    "title": "Размещение навыка в Yandex Cloud",
+    "chars": 3306
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/development",
+    "title": "Порядок действий",
+    "chars": 2753
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/earning",
+    "title": "Как заработать на навыках",
+    "chars": 233830
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/education",
+    "title": "Обучающие материалы",
+    "chars": 1964
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/feedback",
+    "title": "Служба поддержки",
+    "chars": 1807
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/guides-and-examples",
+    "title": "Полезные ссылки",
+    "chars": 11509
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/health-check",
+    "title": "Периодическая проверка ответов",
+    "chars": 764
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/interface",
+    "title": "Интерфейс навыка",
+    "chars": 262679
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/moderation",
+    "title": "Модерация",
+    "chars": 5862
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/monitoring",
+    "title": "Мониторинг работы навыка",
+    "chars": 3836
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/morning-show-protocol",
+    "title": "Навыки в утреннем шоу Алисы",
+    "chars": 19591
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/naming-entities",
+    "title": "Именованные сущности в запросах",
+    "chars": 4143
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/nlu",
+    "title": "Обработка естественного языка (NLP)",
+    "chars": 13777
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/preparation",
+    "title": "Цели и аудитория навыка",
+    "chars": 3606
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/prepare-steps",
+    "title": "Порядок действий",
+    "chars": 841
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/procedure",
+    "title": "Порядок действий",
+    "chars": 2243
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/protocol",
+    "title": "Обзор",
+    "chars": 40957
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/publication",
+    "title": "Публикация",
+    "chars": 41256
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/publish",
+    "title": "Порядок действий",
+    "chars": 1619
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/publish-settings",
+    "title": "Настройки публикации",
+    "chars": 13427
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/quickstart-about",
+    "title": "Как создать навык",
+    "chars": 22147
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/quickstart-programming",
+    "title": "Программистам",
+    "chars": 18354
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/quickstart-visual-editors",
+    "title": "Без программирования",
+    "chars": 2751
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/recommendations",
+    "title": "Проверка диалога",
+    "chars": 896079
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/request",
+    "title": "Формат запроса",
+    "chars": 8425
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/request-buttonpressed",
+    "title": "ButtonPressed",
+    "chars": 4806
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/request-show-pull",
+    "title": "Show.Pull",
+    "chars": 1670
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/request-simpleutterance",
+    "title": "SimpleUtterance",
+    "chars": 6344
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/requirements",
+    "title": "Требования к навыкам",
+    "chars": 23106
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/resource-sounds-upload",
+    "title": "Собственное аудио",
+    "chars": 8093
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/resource-upload",
+    "title": "Изображения",
+    "chars": 8541
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/response",
+    "title": "Формат ответа",
+    "chars": 8343
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/response-card-bigimage",
+    "title": "BigImage",
+    "chars": 2629
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/response-card-imagegallery",
+    "title": "ImageGallery",
+    "chars": 3367
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/response-card-itemslist",
+    "title": "ItemsList",
+    "chars": 4815
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/response-show-item-meta",
+    "title": "show_item_meta",
+    "chars": 2610
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/response-start-account-linking",
+    "title": "start_account_linking",
+    "chars": 1028
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/rewards",
+    "title": "Премия Алисы",
+    "chars": 3470
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/session-persistence",
+    "title": "Хранение состояния",
+    "chars": 8952
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/skill-create-console",
+    "title": "Создание навыка в консоли",
+    "chars": 4631
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/skills-promotion-badge",
+    "title": "Бейдж навыка",
+    "chars": 2333
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/skills-promotion-deeplink",
+    "title": "Прямая ссылка на навык",
+    "chars": 1353
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds",
+    "title": "Обзор",
+    "chars": 5069
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/speech-effects",
+    "title": "Наложение эффектов",
+    "chars": 3258
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/speech-tuning",
+    "title": "Настройка генерации речи",
+    "chars": 2992
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/surfaces",
+    "title": "Где работают навыки",
+    "chars": 69324
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/test",
+    "title": "Тестирование",
+    "chars": 709395
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/troubleshooting",
+    "title": "Часто задаваемые вопросы",
+    "chars": 26272
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/voices",
+    "title": "Голоса навыков",
+    "chars": 2575
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/wait-response",
+    "title": "Ожидание ответа от навыка",
+    "chars": 4183
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/word-processing",
+    "title": "Обработка реплик",
+    "chars": 5977
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/write-scenario",
+    "title": "Написание сценария для навыка",
+    "chars": 6491
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/add-skill-to-console",
+    "title": "Добавить связку аккаунтов в консоли разработчика",
+    "chars": 17498
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/create-server",
+    "title": "Настроить авторизационный сервер",
+    "chars": 17669
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/how-it-works",
+    "title": "Как устроена авторизация",
+    "chars": 1528237
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/make-skill",
+    "title": "Дополнить навык",
+    "chars": 23826
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/send-to-moderation",
+    "title": "Отправить навык на модерацию",
+    "chars": 17380
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/test-skill",
+    "title": "Протестировать навык в консоли разработчика",
+    "chars": 18436
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/user-authorization",
+    "title": "Как авторизацию видят пользователи",
+    "chars": 33153
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/when-to-use",
+    "title": "Когда использовать авторизацию в навыке",
+    "chars": 18801
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/auth/workflow",
+    "title": "Порядок работы",
+    "chars": 989
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds/animals",
+    "title": "Животные",
+    "chars": 7166
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds/games",
+    "title": "Игры",
+    "chars": 3400
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds/humans",
+    "title": "Люди",
+    "chars": 5466
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds/music",
+    "title": "Музыка",
+    "chars": 7068
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds/nature",
+    "title": "Природа",
+    "chars": 3497
+  },
+  {
+    "url": "https://yandex.ru/dev/dialogs/alice/doc/ru/sounds/things",
+    "title": "Вещи",
+    "chars": 7665
+  }
+]

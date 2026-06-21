@@ -1,0 +1,29 @@
+{
+  "expectations": [
+    {
+      "text": "Requires checking meta.interfaces.account_linking before starting linking.",
+      "passed": true,
+      "evidence": "живает связку аккаунтов. Перед отправкой директивы обязательно проверить: ```js const canLink = Boolean(request.meta?.interfaces?.account_linking); ``` Если `meta.interfaces.account_linking` есть, навык отвечает с директивой: ```json { \"response\": { \"text\": \"Чтобы показать баланс бонусной карты, нужно войти в аккаунт кофейни.\", \"end_session\": false, \"directives\": {"
+    },
+    {
+      "text": "Uses start_account_linking directive for authorization.",
+      "passed": true,
+      "evidence": "ланс. Если токен отсутствует, просрочен или отклонен ресурсным сервером, переходить к авторизации. ## Когда запускать `start_account_linking` Запускать `start_account_linking` нужно только когда одновременно выполнены условия: - пользователь запросил данные, требующие аккаунта кофейни; - валидного `access_token` нет; - текущая поверхность поддерживает связку аккаунтов. Перед отправкой директивы"
+    },
+    {
+      "text": "Mentions session.user.access_token or Authorization token location.",
+      "passed": true,
+      "evidence": "нусной карты\" } } } ``` 3. Проверить, есть ли уже токен. Основной источник — заголовок webhook-запроса: ```http Authorization: Bearer <access_token> ``` Если платформа или облачная функция не передает заголовки, искать токен в теле запроса: ```json { \"session\": { \"user\": { \"access_token\": \"<access_token>\" } } } ``` 4. Если токен есть, проверить его на ресурсном"
+    },
+    {
+      "text": "Provides fallback behavior when account_linking is unavailable.",
+      "passed": true,
+      "evidence": "одновременно выполнены условия: - пользователь запросил данные, требующие аккаунта кофейни; - валидного `access_token` нет; - текущая поверхность поддерживает связку аккаунтов. Перед отправкой директивы обязательно проверить: ```js const canLink = Boolean(request.meta?.interfaces?.account_linking); ``` Если `meta.interfaces.account_linking` есть, навык отвечает с директивой: ```json { \"response\": { \"text\": \"Чтобы показать баланс бонусной карты, нужно войти в аккаунт кофейни.\", \"end_session\": false, \"directives\": { \"start_account_linking\": {} } }, \"session_state\": { \"pending_action\": { \"intent\": \"check_bonus_balance\", \"original_command\": \"покажи баланс бонусной карты\" } }, \"version\": \"1.0\" } ``` Токен не нужно запрашивать у пользователя голосом и нельзя просить назвать пароль или код. Пользователь вводит учетные данные только на странице авторизации кофейни в OAuth-потоке. ## Если `account_linking` недоступен Если `meta.interfaces.account_linking` отсутствует, не отправлять `start_account_linking`: такая команда может не сработать на поверхности пользователя. Вместо этого нужно дать безопасный fallback: - объяснить, что на этом устройстве вход в аккаунт недоступен; - не раскрывать баланс; - предложить открыть навык на поддерживаемой поверхности или привязать аккаунт в приложении/каталоге навыка; - оставить сценарий без авторизации доступным, например рассказать правила программы лояльности. Пример ответа: ```json { \"response\": { \"text\": \"Я могу показать баланс только после входа в аккаунт кофейни, но на этом устройстве авторизация недоступна. Откройте навык в приложении Яндекс или Яндекс Браузере и привяжите аккаунт, затем снова попросите баланс.\", \"end_session\": false }, \"version\": \"1.0\" } ``` ## Как не потерять исходный запрос после авторизации Перед `start_account_linking` сохранять не только текст команды, а нормализованное намерение: `pending_action.intent`, нужные параметры и `original_command`. Для краткого сценария достаточно `session_state`, но если пользователь может завершить авторизацию и вернуться в новый сеанс, лучш"
+    },
+    {
+      "text": "Mentions saving/restoring the original user request or intent for seamless authorization.",
+      "passed": true,
+      "evidence": "з авторизации рассказывать про меню, адреса, правила программы лояльности и способы получить карту. ## Поток обработки запроса 1. Распознать намерение пользователя, например `check_bonus_balance`. 2. Сохранить исходное намерение и параметры в состояние до запуска авторизации: ```json { \"session_state\": { \"pending_action\": { \"intent\": \"check_bonus_balance\", \"origi"
+    }
+  ]
+}

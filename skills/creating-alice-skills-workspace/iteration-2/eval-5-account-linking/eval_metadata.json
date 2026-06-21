@@ -1,0 +1,12 @@
+{
+  "eval_id": 5,
+  "eval_name": "account-linking",
+  "prompt": "Опиши безопасный сценарий авторизации для навыка Алисы, который показывает баланс бонусной карты кофейни. Нужно: когда запускать start_account_linking, что проверить в meta.interfaces, где искать access_token, что делать если account_linking недоступен, и как не потерять исходный запрос пользователя после авторизации.",
+  "assertions": [
+    "Requires checking meta.interfaces.account_linking before starting linking.",
+    "Uses start_account_linking directive for authorization.",
+    "Mentions session.user.access_token or Authorization token location.",
+    "Provides fallback behavior when account_linking is unavailable.",
+    "Mentions saving/restoring the original user request or intent for seamless authorization."
+  ]
+}

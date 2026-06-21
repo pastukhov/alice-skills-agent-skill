@@ -1,0 +1,29 @@
+{
+  "expectations": [
+    {
+      "text": "Maps current session score to session_state.",
+      "passed": true,
+      "evidence": "вторизованного пользователя и настройки конкретного устройства или приложения. ## 1. Счет текущей сессии Используйте `session_state` в ответе навыка. Что хранить: ```json { \"quiz\": { \"question_index\": 3, \"score\": 2, \"current_question_id\": \"capitals_003\", \"answered\": [\"capitals_001\", \"capitals_002\"] } } ``` Как читать: из `state.session` в следующем запросе. Как пис"
+    },
+    {
+      "text": "Maps authorized user's cross-session progress to user_state_update.",
+      "passed": true,
+      "evidence": "ate`, который пришел в `state.session`. ## 2. Общий прогресс авторизованного пользователя между сессиями Используйте `user_state_update` в ответе навыка. Этот слой подходит для прогресса, который должен следовать за пользователем между устройствами, если пользователь авторизован через Яндекс ID. В запросе наличие `session.user.user_id` означает авторизованного пользователя; сохраненное состо"
+    },
+    {
+      "text": "Maps device/application settings to exact response field application_state, not application_state_update.",
+      "passed": true,
+      "evidence": "есса потребуется авторизация или собственное серверное хранилище. ## 3. Настройки конкретного устройства Используйте `application_state` в ответе навыка. Этот слой привязан к экземпляру приложения или устройства, то есть к `session.application.application_id`. Он подходит для настроек поверхности: озвучивать ли подсказки, предпочитаемая сложность на этом устройстве, режим коротких ответов, н"
+    },
+    {
+      "text": "Mentions 1 KB JSON object limit for stored state.",
+      "passed": true,
+      "evidence": "ны быть обязательные поля протокола: `response.text`, `response.end_session` и `version: \"1.0\"`. Текст ответа ограничен 1024 символами, а каждый объект сохраняемого состояния для `session_state` и `user_state_update` ограничен 1 КБ. ## Легкая ошибка Самая частая ошибка — обновить счет в памяти обработчика, но не вернуть `session_state` в следующем ответе. В Алисе сессионный стейт"
+    },
+    {
+      "text": "Mentions clearing fields with null and preserving unchanged session_state by returning it.",
+      "passed": true,
+      "evidence": "te_update` максимум 1 КБ. Очистка: чтобы удалить поле из пользовательского состояния, отправьте это поле со значением `null`, например: ```json { \"user_state_update\": { \"progress\": null } } ``` Если пользователь не авторизован, не рассчитывайте на `state.user`: для долгосрочного персонального прогресса потребуется авторизация или собственное серверное хранилище. ## 3. Н"
+    }
+  ]
+}

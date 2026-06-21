@@ -1,0 +1,41 @@
+{
+  "skill_name": "creating-alice-skills",
+  "iteration": 2,
+  "summary": [
+    {
+      "configuration": "with_skill",
+      "passed": 20,
+      "total": 20,
+      "pass_rate": 1.0
+    },
+    {
+      "configuration": "without_skill",
+      "passed": 17,
+      "total": 20,
+      "pass_rate": 0.85
+    }
+  ],
+  "evals": [
+    {
+      "eval_name": "response-schema-repair",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 4, "total": 5}
+    },
+    {
+      "eval_name": "account-linking",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 5, "total": 5}
+    },
+    {
+      "eval_name": "state-persistence",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 3, "total": 5}
+    },
+    {
+      "eval_name": "cards-buttons-surfaces",
+      "with_skill": {"passed": 5, "total": 5},
+      "without_skill": {"passed": 5, "total": 5}
+    }
+  ],
+  "notes": "Hard suite targets exact protocol details. Baseline failed on top-level session response handling, 1 KB state limit, and exact application_state field."
+}
