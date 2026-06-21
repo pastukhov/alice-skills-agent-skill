@@ -1,0 +1,96 @@
+{
+  "skill_name": "creating-alice-skills",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Помоги спроектировать публичный навык Алисы для кофейни: пользователь должен узнать меню, адреса, часы работы и оставить заявку на обратный звонок. Нужны активационные фразы, сценарий диалога, требования к модерации и тестовый чеклист.",
+      "expected_output": "A complete Alice skill design that covers activation names, conversation paths, state/privacy concerns for callback requests, moderation risks, and test scenarios.",
+      "files": [],
+      "assertions": [
+        "Includes activation name suggestions and example user phrases.",
+        "Includes a multi-turn conversation flow with fallback and exit behavior.",
+        "Mentions privacy or account-linking considerations for callback requests.",
+        "Includes moderation checks for name, description, brand/content, and publication metadata.",
+        "Includes a concrete test checklist."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Напиши минимальный webhook для навыка Алисы на любом удобном языке: он должен принимать SimpleUtterance, повторять команду пользователя, обрабатывать кнопку 'Помощь' через payload и корректно завершать сессию по слову 'хватит'.",
+      "expected_output": "A protocol-correct webhook implementation or clear code skeleton with request.type routing, ButtonPressed payload handling, response.text, response.end_session, and version 1.0.",
+      "files": [],
+      "assertions": [
+        "Routes on request.type and handles SimpleUtterance separately from ButtonPressed.",
+        "Uses ButtonPressed payload rather than button title for the help action.",
+        "Returns response.text, response.end_session, and version 1.0.",
+        "Ends the session when the user says the specified exit word.",
+        "Uses realistic Alice request/response JSON field names."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Проверь идею навыка Алисы перед публикацией: название 'Лучший официальный помощник Яндекса', описание обещает медицинские диагнозы по симптомам, а ответы содержат ссылки на сайт клиники. Что не пройдет модерацию и как исправить?",
+      "expected_output": "A review focused on moderation/legal risks, brand misuse, clickbait/superlatives, medical safety, advertising/link concerns, and concrete safer alternatives.",
+      "files": [],
+      "assertions": [
+        "Flags use of Yandex/Alice-related branding or official status claims as a moderation risk.",
+        "Flags superlative or clickbait wording such as 'best' or 'official' without proof.",
+        "Flags medical diagnosis promises as a safety/legal moderation risk.",
+        "Discusses links/traffic/advertising concerns rather than ignoring them.",
+        "Proposes safer concrete alternatives for name, description, and functionality."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Ниже ответ webhook навыка Алисы. Проверь его на соответствие протоколу и перепиши корректно: {\"version\":\"1.0\",\"session\":{\"session_id\":\"s1\"},\"response\":{\"text\":\"Вот адреса\",\"card\":{\"type\":\"ItemsList\",\"items\":[{\"title\":\"Точка 1\"}]},\"buttons\":[{\"title\":\"Сайт\",\"url\":\"https://example.com\"}]}}. Укажи, что именно было неверно.",
+      "expected_output": "Identifies invalid or risky response details and returns a corrected Alice response JSON with required response.end_session, no unnecessary top-level session, valid card/image requirements or safe alternative, and voice fallback text.",
+      "files": [],
+      "assertions": [
+        "Flags missing response.end_session as a protocol problem.",
+        "Flags unnecessary top-level session in the response.",
+        "Mentions that visual cards need useful response.text fallback for voice-only devices.",
+        "Flags ItemsList image requirements or changes the card to a valid/safe response.",
+        "Provides corrected JSON with version 1.0, response.text, and response.end_session."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Опиши безопасный сценарий авторизации для навыка Алисы, который показывает баланс бонусной карты кофейни. Нужно: когда запускать start_account_linking, что проверить в meta.interfaces, где искать access_token, что делать если account_linking недоступен, и как не потерять исходный запрос пользователя после авторизации.",
+      "expected_output": "A precise account-linking design using meta.interfaces.account_linking, start_account_linking, session.user.access_token or Authorization token, fallback behavior, and preserving the original user intent.",
+      "files": [],
+      "assertions": [
+        "Requires checking meta.interfaces.account_linking before starting linking.",
+        "Uses start_account_linking directive for authorization.",
+        "Mentions session.user.access_token or Authorization token location.",
+        "Provides fallback behavior when account_linking is unavailable.",
+        "Mentions saving/restoring the original user request or intent for seamless authorization."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Спроектируй хранение состояния для викторины в навыке Алисы: счет текущей сессии, общий прогресс авторизованного пользователя между сессиями и настройки конкретного устройства. Укажи какие поля ответа использовать, лимиты, как очищать значения и какую ошибку легко допустить.",
+      "expected_output": "Correctly maps session score to session_state, cross-session authorized user progress to user_state_update, device/application preferences to application_state, mentions size limits, null deletion, and preserving unchanged session_state.",
+      "files": [],
+      "assertions": [
+        "Maps current session score to session_state.",
+        "Maps authorized user's cross-session progress to user_state_update.",
+        "Maps device/application settings to application_state.",
+        "Mentions 1 KB JSON object limit for stored state.",
+        "Mentions clearing fields with null and preserving unchanged session_state by returning it."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Составь правила ответа для навыка Алисы, который показывает карточку с изображением товара и кнопки. Нужно учесть устройства без screen, BigImage/ImageGallery/ItemsList, payload кнопок, ссылки, и что нельзя делать при обработке ButtonPressed.",
+      "expected_output": "A surface-aware response guide covering response.text fallback, card type selection and limits, payload-based button handling, links, and not routing button clicks by visible title.",
+      "files": [],
+      "assertions": [
+        "Requires checking screen capability or providing voice-friendly response.text fallback.",
+        "Mentions BigImage, ImageGallery, and ItemsList card types or their selection.",
+        "Mentions item count/image requirements or limits for gallery/list cards.",
+        "Requires using payload for ButtonPressed handling.",
+        "Warns not to route ButtonPressed by visible button title."
+      ]
+    }
+  ]
+}
